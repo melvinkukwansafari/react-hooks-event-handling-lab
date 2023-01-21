@@ -1,19 +1,14 @@
 // Code EyesOnMe Component Here
 
-import React, { Component } from 'react';
-
-class EyesOnMe extends Component {
-
-  handleFocus = () => {
-    console.log("Button focused");
-  }
-
-  handleBlur = () => {
-    console.log("Button blurred");
-  } 
-  render() {
-    return <button onFocus={this.handleFocus} onBlur={this.handleBlur}>Eyes On Me</button>;
-  }
-}
+const EyesOnMe = (props) => {
+  let click = {props}
+  return (
+      <div>
+          <input type="password" onClick={props.handleClick} />
+          <button onClick={() => props.onClick(props >= [1])}>Hey! Eyes on me!</button>
+          
+      </div>
+  );
+};
 
 export default EyesOnMe;
